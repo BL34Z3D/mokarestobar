@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moka RestoBar | Cultura, Café y Experiencia Sensorial</title>
+    <meta name="description"
+        content="Descubre el verdadero sabor del café de especialidad en Montes de María. Moka RestoBar - El Carmen de Bolívar.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <!-- LOADER -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="coffee-cup">
+                <div class="cup-body">
+                    <div class="coffee-fill"></div>
+                </div>
+                <div class="cup-handle"></div>
+                <div class="steam">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            <p class="loader-text">Preparando tu experiencia...</p>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <div class="text-logo">
+                    <span class="moka">M<span class="bean-o"></span>ka</span>
+                    <span class="restobar">RESTO BAR</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-users"></i> Nosotros</a></li>
+                <li><a href="#menu" class="nav-link"><i class="fas fa-coffee"></i> Menú</a></li>
+                <li><a href="#events" class="nav-link"><i class="fas fa-calendar-alt"></i> Eventos</a></li>
+                <li><a href="#gallery" class="nav-link"><i class="fas fa-images"></i> Galería</a></li>
+                <li><a href="#location" class="nav-link"><i class="fas fa-map-marker-alt"></i> Contactos - Ubicación</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+        <div class="hero-bg">
+            <video autoplay muted playsinline id="heroMainVideo" class="hero-video">
+                <source src="assets/imagenes/animacion6.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-particles" id="heroParticles"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-animate="fadeUp" data-delay="200">
+                Cultura, Café y<br><span class="text-gradient">Experiencia Sensorial</span>
+            </h1>
+            <p class="hero-subtitle" data-animate="fadeUp" data-delay="400">
+                Descubre el verdadero sabor del café de especialidad en Montes de María
+            </p>
+            <div class="hero-cta" data-animate="fadeUp" data-delay="600">
+                <a href="#menu" class="btn btn-primary">
+                    <span>Ver Menú</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#experience" class="btn btn-outline">
+                    <span>Nuestra Historia</span>
+                </a>
+            </div>
+            <div class="hero-stats" data-animate="fadeUp" data-delay="800">
+                <div class="stat">
+                    <span class="stat-icon">👃</span>
+                    <span class="stat-label">Aroma</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-icon">👅</span>
+                    <span class="stat-label">Sabor</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-icon">📍</span>
+                    <span class="stat-label">Origen</span>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator">
+            <span class="scroll-text">Descubre más</span>
+            <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
+        </a>
+    </section>
+
+    <!-- QUIÉNES SOMOS -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image" data-animate="fadeRight">
+                    <div class="about-img-wrapper">
+                        <img src="assets/imagenes/quienes somos.jpeg" alt="Quiénes Somos Moka" class="about-img-real">
+                        <div class="about-img-decoration"></div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag" data-animate="fadeUp" data-delay="100">Quiénes Somos</span>
+                    <h2 class="section-title" data-animate="fadeUp" data-delay="200">Más que café,<br><span class="text-gradient">una experiencia
+                            cultural</span></h2>
+                    <p class="about-text" data-animate="fadeUp" data-delay="300">
+                        <strong>Moka RestoBar</strong> nació en el corazón de <strong>El Carmen de Bolívar</strong> como
+                        un espacio dedicado a la cultura cafetera. Somos más que una cafetería — somos un punto de
+                        encuentro donde el café de especialidad de los <strong>Montes de María</strong> se convierte en
+                        una experiencia transformadora.
+                    </p>
+                    <p class="about-text" data-animate="fadeUp" data-delay="400">
+                        Cada taza que servimos cuenta la historia de nuestros caficultores locales, del proceso
+                        artesanal que transforma el grano en una obra maestra sensorial. Aquí, beber café es un viaje
+                        que conecta el aroma, el sabor y el origen.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature" data-animate="fadeLeft" data-delay="500">
+                            <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                            <div class="feature-text">
+                                <h4>Origen Local</h4>
+                                <p>Café de Montes de María</p>
+                            </div>
+                        </div>
+                        <div class="feature" data-animate="fadeLeft" data-delay="650">
+                            <div class="feature-icon"><i class="fas fa-award"></i></div>
+                            <div class="feature-text">
+                                <h4>SCA 80+</h4>
+                                <p>Café de especialidad certificado</p>
+                            </div>
+                        </div>
+                        <div class="feature" data-animate="fadeLeft" data-delay="800">
+                            <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                            <div class="feature-text">
+                                <h4>Preparación Artesanal</h4>
+                                <p>Métodos de extracción premium</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCIA DEL CAFÉ -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <div class="section-header" data-animate="fadeUp">
+                <span class="section-tag">Experiencia del Café</span>
+                <h2 class="section-title">Del grano a tu taza,<br><span class="text-gradient">una obra maestra</span>
+                </h2>
+                <p class="section-desc">Nuestro café de especialidad con puntuación SCA superior a 80 recorre un camino
+                    artesanal desde su origen en Montes de María.</p>
+            </div>
+            <div class="experience-timeline">
+                <div class="timeline-item" data-animate="fadeUp">
+                    <div class="timeline-icon"><i class="fas fa-seedling"></i></div>
+                    <div class="timeline-content">
+                        <h3>Origen del Grano</h3>
+                        <p>Seleccionamos los mejores granos cultivados por caficultores locales de los Montes de María,
+                            a altitudes ideales que potencian la complejidad de sabor.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-animate="fadeUp" data-delay="150">
+                    <div class="timeline-icon"><i class="fas fa-sync-alt"></i></div>
+                    <div class="timeline-content">
+                        <h3>Proceso Cuidadoso</h3>
+                        <p>Cada lote pasa por procesos de beneficio controlados — lavado, honey o natural — que definen
+                            el perfil de taza único de nuestro café.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-animate="fadeUp" data-delay="300">
+                    <div class="timeline-icon"><i class="fas fa-fire-alt"></i></div>
+                    <div class="timeline-content">
+                        <h3>Tueste Artesanal</h3>
+                        <p>Tostamos en perfiles específicos que resaltan las notas de sabor: chocolate, frutas, caramelo
+                            y florales que hacen único cada origen.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-animate="fadeUp" data-delay="450">
+                    <div class="timeline-icon"><i class="fas fa-mug-hot"></i></div>
+                    <div class="timeline-content">
+                        <h3>Preparación Premium</h3>
+                        <p>Nuestros baristas certificados preparan cada taza con precisión, usando métodos artesanales
+                            que extraen lo mejor de cada grano.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENÚ INTERACTIVO -->
+    <section id="menu" class="section menu">
+        <div class="container">
+            <div class="section-header" data-animate="fadeUp">
+                <span class="section-tag">Nuestra Carta</span>
+                <h2 class="section-title">Sabores que<br><span class="text-gradient">Enamoran</span></h2>
+            </div>
+
+            <!-- Navegación del Menú (Tabs) -->
+            <div class="menu-tabs-container" data-animate="fadeUp">
+                <div class="menu-tabs">
+                    <button class="menu-cat-tab active" data-catalog="cafe">
+                        <i class="fas fa-coffee"></i> Ritual del Café
+                    </button>
+                    <button class="menu-cat-tab" data-catalog="manana">
+                        <i class="fas fa-sun"></i> Mañana Sensorial
+                    </button>
+                    <button class="menu-cat-tab" data-catalog="gastronomia">
+                        <i class="fas fa-utensils"></i> Gastronomía
+                    </button>
+                    <button class="menu-cat-tab" data-catalog="esencia">
+                        <i class="fas fa-concierge-bell"></i> Esencia del Autor
+                    </button>
+                    <button class="menu-cat-tab" data-catalog="urbana">
+                        <i class="fas fa-hamburger"></i> Experiencia Urbana
+                    </button>
+                    <button class="menu-cat-tab" data-catalog="infantil">
+                        <i class="fas fa-child"></i> Menú Infantil
+                    </button>
+                    <button class="menu-cat-tab" data-catalog="refrescos">
+                        <i class="fas fa-tint"></i> Bebidas
+                    </button>
+                    <button class="menu-cat-tab" data-catalog="bar">
+                        <i class="fas fa-cocktail"></i> Moka Bar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Contenedores de Categorías -->
+            <div class="menu-content" data-animate="fadeUp">
+                <!-- 1. RITUAL DEL CAFÉ (Activo por defecto) -->
+                <div class="menu-catalog-container active" id="catalog-cafe">
+                    <div class="menu-catalog-featured">
+                        <img src="assets/menus/ritualcafe.avif" alt="Ritual del Café" class="catalog-img">
+                        <div class="catalog-overlay">
+                            <h3>El Ritual del Café</h3>
+                            <p>Clásicos de Barista & Métodos de Inmersión</p>
+                        </div>
+                    </div>
+                    <div class="menu-catalog-list catalog-triple">
+                        <div class="catalog-category">
+                            <h4>CLÁSICOS DE BARISTA</h4>
+                            <ul class="catalog-items">
+                                <li><span>Espresso</span> <span class="price">$7.000</span></li>
+                                <li><span>Americano</span> <span class="price">$8.000</span></li>
+                                <li><span>Machiato</span> <span class="price">$9.000</span></li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Latte Tradicional</span>
+                                        <p class="item-desc">Adición Caramelo +$3.000</p>
+                                    </div>
+                                    <span class="price">$9.000</span>
+                                </li>
+                                <li><span>Cappuccino</span> <span class="price">$11.000</span></li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Cappuccino Vainilla / Arequipe</span>
+                                        <p class="item-desc">Adición Caramelo +$3.000</p>
+                                    </div>
+                                    <span class="price">$12.000</span>
+                                </li>
+                                <li><span>Cococinno</span> <span class="price">$12.000</span></li>
+                                <li><span>Mocaccino</span> <span class="price">$12.000</span></li>
+                                <li><span>Café Irlandés</span> <span class="price">$16.000</span></li>
+                            </ul>
+                        </div>
+                        <div class="catalog-category">
+                            <h4>MÉTODOS DE INMERSIÓN Y GOTEO</h4>
+                            <ul class="catalog-items">
+                                <li>
+                                    <div class="item-info">
+                                        <span>Kioto / Cold Brew (Copa)</span>
+                                        <p class="item-desc">Extracción en frío de larga duración</p>
+                                    </div>
+                                    <span class="price">$10.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>AeroPress</span>
+                                        <p class="item-desc">Versatilidad y concentración 1 Taza</p>
+                                    </div>
+                                    <span class="price">$10.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Prensa Francesa (1 Taza)</span>
+                                        <p class="item-desc">Cuerpo y textura</p>
+                                    </div>
+                                    <span class="price">$10.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Prensa Francesa (2 Tazas)</span>
+                                        <p class="item-desc">Para compartir</p>
+                                    </div>
+                                    <span class="price">$18.000</span>
+                                </li>
+                                <li><span>V60 (2 Tazas)</span> <span class="price">$23.000</span></li>
+                                <li><span>Origami (2 Tazas)</span> <span class="price">$23.000</span></li>
+                                <li><span>Chemex (2 Tazas)</span> <span class="price">$24.000</span></li>
+                                <li><span>Suiren (2 Tazas)</span> <span class="price">$24.000</span></li>
+                                <li><span>Siphon Japonés (2 Tazas)</span> <span class="price">$26.000</span></li>
+                            </ul>
+                        </div>
+                        <div class="catalog-category">
+                            <h4>CAFÉ FRÍOS</h4>
+                            <ul class="catalog-items">
+                                <li><span>Soda de café</span> <span class="price">$12.000</span></li>
+                                <li><span>Frapuccino</span> <span class="price">$12.000</span></li>
+                                <li><span>Ice moka</span> <span class="price">$14.000</span></li>
+                                <li><span>Caramel latte</span> <span class="price">$16.000</span></li>
+                                <li><span>Nevado oreo</span> <span class="price">$17.000</span></li>
+                                <li><span>Nevado arequipe</span> <span class="price">$17.000</span></li>
+                                <li><span>Nevado de chocolate</span> <span class="price">$18.000</span></li>
+                                <li><span>Nevado caramelo</span> <span class="price">$18.000</span></li>
+                                <li><span>Frapuccino Baileys</span> <span class="price">$18.000</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. MAÑANA SENSORIAL -->
+                <div class="menu-catalog-container" id="catalog-manana">
+                    <div class="menu-catalog-featured">
+                        <img src="assets/menus/desayuno.webp" alt="Portada Desayunos" class="catalog-img">
+                        <div class="catalog-overlay">
+                            <h3>Mañana Sensorial</h3>
+                            <p>Desayunos & Entradas</p>
+                        </div>
+                    </div>
+                    <div class="menu-catalog-list catalog-triple">
+                        <!-- Columna 1: Pastelería -->
+                        <div class="catalog-category">
+                            <h4>PASTELERÍA & SALADOS</h4>
+                            <ul class="catalog-items">
+                                <li><span>Palito de queso horneado</span> <span class="price">$6.000</span></li>
+                                <li><span>Croisandwich de jamón y queso</span> <span class="price">$8.000</span></li>
+                                <li><span>Arepa dulce anís (queso costeño)</span> <span class="price">$8.000</span></li>
+                                <li><span>Torta Artesanal de Zanahoria</span> <span class="price">$11.000</span></li>
+                                <li><span>Torta de Naranja con Amapola</span> <span class="price">$12.000</span></li>
+                                <li><span>Torta Artesanal de Chocolate</span> <span class="price">$12.000</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Columna 2: Desayunos -->
+                        <div class="catalog-category">
+                            <h4>DESAYUNOS DE ORIGEN</h4>
+                            <ul class="catalog-items">
+                                <li>
+                                    <div class="item-info">
+                                        <span>Omelet de Jamón y Queso</span>
+                                        <p class="item-desc">Delicada tortilla de huevos, rellena de jamón premium y queso fundido, acompañada de pan.</p>
+                                    </div>
+                                    <span class="price">$18.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Desayuno Costeño</span>
+                                        <p class="item-desc">Patacones, queso, chorizo, butifarra, suero y huevos.</p>
+                                    </div>
+                                    <span class="price">$22.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Desayuno Moka</span>
+                                        <p class="item-desc">Arepa de yuca, huevos revueltos, empanadas, fruta, café o jugo.</p>
+                                    </div>
+                                    <span class="price">$25.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Cayeye Coronado</span>
+                                        <p class="item-desc">Puré de guineo de los Montes de María con queso y chicharrón.</p>
+                                    </div>
+                                    <span class="price">$25.000</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Columna 3: Entradas -->
+                        <div class="catalog-category">
+                            <h4>ENTRADAS</h4>
+                            <ul class="catalog-items">
+                                <li>
+                                    <div class="item-info">
+                                        <span>Bruschettas con Jamón Serrano</span>
+                                        <p class="item-desc">Pan artesanal crocante con esencia de ajo, aceite de oliva y finas láminas de jamón serrano.</p>
+                                    </div>
+                                    <span class="price">$12.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Bolas de Candela</span>
+                                        <p class="item-desc">Esferas crujientes de sabor tradicional; un homenaje a la tradición del pueblo carmero.</p>
+                                    </div>
+                                    <span class="price">$20.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Tortilla Española</span>
+                                        <p class="item-desc">Receta clásica de papas seleccionadas y huevo en un punto de cocción tierno y auténtico.</p>
+                                    </div>
+                                    <span class="price">$20.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Champiñones al Ajillo</span>
+                                        <p class="item-desc">Champiñones frescos salteados en emulsión de ajo y especias, realzados con jamón serrano.</p>
+                                    </div>
+                                    <span class="price">$22.000</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. GASTRONOMÍA DE AUTOR -->
+                <div class="menu-catalog-container" id="catalog-gastronomia">
+                    <div class="menu-catalog-featured">
+                        <img src="assets/menus/almuerzo.webp" alt="Portada Gastronomía" class="catalog-img">
+                        <div class="catalog-overlay">
+                            <h3>Gastronomía de Autor</h3>
+                            <p>Platos Fuertes & Alta Cocina</p>
+                        </div>
+                    </div>
+                    <div class="menu-catalog-list catalog-triple">
+                        <div class="catalog-category">
+                            <h4>ESPECIALIDADES DE AVE</h4>
+                            <ul class="catalog-items">
+                                <li>
+                                    <div class="item-info">
+                                        <span>Alas de Pollo</span>
+                                        <p class="item-desc">BBQ, Miel Mostaza o Chilli Dulce. Con papas y ensalada.</p>
+                                    </div>
+                                    <span class="price">$30.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Pechuga a la Plancha</span>
+                                        <p class="item-desc">Servida con papas francesas y ensalada de la casa.</p>
+                                    </div>
+                                    <span class="price">$32.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Milanesa de Pollo</span>
+                                        <p class="item-desc">Apanada en salsa miel mostaza, con arroz perla y ensalada.</p>
+                                    </div>
+                                    <span class="price">$34.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Pechuga en Salsa Cremosa</span>
+                                        <p class="item-desc">Bañada en una suave emulsión de champiñones.</p>
+                                    </div>
+                                    <span class="price">$35.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Pechuga Gratinada</span>
+                                        <p class="item-desc">Con queso fundido, acompañada de cayeye o papas.</p>
+                                    </div>
+                                    <span class="price">$38.000</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="catalog-category">
+                            <h4>CORTES DE CERDO</h4>
+                            <ul class="catalog-items">
+                                <li>
+                                    <div class="item-info">
+                                        <span>Lomo de Cerdo a la Plancha</span>
+                                        <p class="item-desc">Corte magro con papas francesas y ensalada.</p>
+                                    </div>
+                                    <span class="price">$30.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Churrasco de Cerdo</span>
+                                        <p class="item-desc">A la plancha, con tradicional cayeye o papas francesas.</p>
+                                    </div>
+                                    <span class="price">$36.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Costillas BBQ</span>
+                                        <p class="item-desc">Tiernas costillas con papas francesas y ensalada.</p>
+                                    </div>
+                                    <span class="price">$37.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Lomo de Cerdo Gratinado</span>
+                                        <p class="item-desc">Terminado al horno con queso, papas y ensalada.</p>
+                                    </div>
+                                    <span class="price">$38.000</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="catalog-category">
+                            <h4>RES & ALTA COCINA</h4>
+                            <ul class="catalog-items">
+                                <li>
+                                    <div class="item-info">
+                                        <span>Baby Beef</span>
+                                        <p class="item-desc">250gr de lomo fino con vegetales salteados y papas casco.</p>
+                                    </div>
+                                    <span class="price">$45.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Salmón a la Naranja</span>
+                                        <p class="item-desc">Filete premium en reducción cítrica, con cayeye y vegetales.</p>
+                                    </div>
+                                    <span class="price">$47.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Lomo Saltado</span>
+                                        <p class="item-desc">Fajitas de res estilo peruano, con arroz blanco y papas.</p>
+                                    </div>
+                                    <span class="price">$48.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Stick a la Pimienta</span>
+                                        <p class="item-desc">300gr de lomo fino con cayeye o papas francesas.</p>
+                                    </div>
+                                    <span class="price">$49.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Picada Moka</span>
+                                        <p class="item-desc">Res, pollo, cerdo, camarones y costilla con patacones y yuca.</p>
+                                    </div>
+                                    <span class="price">$60.000</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. ESENCIA DEL AUTOR: PASTAS & ARROCES -->
+                <div class="menu-catalog-container" id="catalog-esencia">
+                    <div class="menu-catalog-featured">
+                        <img src="assets/menus/autor.jpg" alt="Portada Esencia" class="catalog-img">
+                        <div class="catalog-overlay">
+                            <h3>Esencia del Autor</h3>
+                            <p>Pastas & Arroces al Wok</p>
+                        </div>
+                    </div>
+                    <div class="menu-catalog-list catalog-double">
+                        <div class="catalog-category">
+                            <h4>PASTAS & LASAGNAS</h4>
+                            <ul class="catalog-items">
+                                <li>
+                                    <div class="item-info">
+                                        <span>Lasagna Vegetariana</span>
+                                        <p class="item-desc">Láminas de pasta rellenas de vegetales de estación y quesos fundidos.</p>
+                                    </div>
+                                    <span class="price">$28.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Lasagna de Pollo</span>
+                                        <p class="item-desc">Pollo desmechado en salsa de la casa, queso gratinado y especies.</p>
+                                    </div>
+                                    <span class="price">$29.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Lasagna de Carne</span>
+                                        <p class="item-desc">Carne de res premium en salsa de la casa y especies.</p>
+                                    </div>
+                                    <span class="price">$30.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Lasagna Mixta</span>
+                                        <p class="item-desc">La combinación perfecta de pollo y carne bajo una capa de queso dorado.</p>
+                                    </div>
+                                    <span class="price">$32.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Fettuccine Bolognesa</span>
+                                        <p class="item-desc">Pasta al dente servida con la tradicional salsa napolitana.</p>
+                                    </div>
+                                    <span class="price">$32.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Fettuccine Carbonara</span>
+                                        <p class="item-desc">Pasta al dente servida con la tradicional salsa blanca con tocineta.</p>
+                                    </div>
+                                    <span class="price">$32.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Fettuccine con Pollo y Champiñones</span>
+                                        <p class="item-desc">Una mezcla cremosa de setas salteadas con pollo.</p>
+                                    </div>
+                                    <span class="price">$34.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Fettuccine con Camarones</span>
+                                        <p class="item-desc">Pasta premium salteada con camarones al ajillo y queso parmesano.</p>
+                                    </div>
+                                    <span class="price">$39.000</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="catalog-category">
+                            <h4>ARROCES DE AUTOR</h4>
+                            <ul class="catalog-items">
+                                <li>
+                                    <div class="item-info">
+                                        <span>Arroz Chaufa de Vegetales</span>
+                                        <p class="item-desc">Salteado al wok con aceite de ajonjolí, zukini, pimentones y lluvia de semillas.</p>
+                                    </div>
+                                    <span class="price">$29.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Arroz Montemariano</span>
+                                        <p class="item-desc">Salteado al wok con pollo, cerdo, chorizo, huevo, maíz y vegetales de la región.</p>
+                                    </div>
+                                    <span class="price">$32.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Arroz al Estilo Oriental</span>
+                                        <p class="item-desc">Mix de carnes, camarones, jamón y raíces chinas, salteados al wok.</p>
+                                    </div>
+                                    <span class="price">$35.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Arroz Especial Moka</span>
+                                        <p class="item-desc">Nuestra joya del wok: pollo, cerdo, carne, camarones y champiñones con salsa teriyaki.</p>
+                                    </div>
+                                    <span class="price">$45.000</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. EXPERIENCIA URBANA -->
+                <div class="menu-catalog-container" id="catalog-urbana">
+                    <div class="menu-catalog-featured">
+                        <img src="assets/menus/urbana.webp" alt="Portada Urbana" class="catalog-img">
+                        <div class="catalog-overlay">
+                            <h3>Experiencia Urbana</h3>
+                            <p>Burgers, Sandwiches & Pitas</p>
+                        </div>
+                    </div>
+                    <div class="menu-catalog-list catalog-triple">
+                        <!-- Columna 1: Sandwiches -->
+                        <div class="catalog-category">
+                            <h4>SANDWICHES & WRAPS</h4>
+                            <ul class="catalog-items">
+                                <li>
+                                    <div class="item-info">
+                                        <span>Sándwich de Jamón y Queso</span>
+                                        <p class="item-desc">Pan artesanal con jamón de cerdo ahumado, mozzarella y salsa de la casa.</p>
+                                    </div>
+                                    <span class="price">$8.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Sándwich Pesto con Tocineta</span>
+                                        <p class="item-desc">Pan aromatizado con pesto, jamón ahumado, huevo frito y papas francesas.</p>
+                                    </div>
+                                    <span class="price">$22.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Sándwich de Pollo o Atún</span>
+                                        <p class="item-desc">Pan de orégano, vegetales frescos, aderezos de la casa y papas francesas.</p>
+                                    </div>
+                                    <span class="price">$24.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Sándwich Italiano</span>
+                                        <p class="item-desc">Salami, pepperoni, queso mozzarella, salsa chipotle y papas francesas.</p>
+                                    </div>
+                                    <span class="price">$27.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>King Moka</span>
+                                        <p class="item-desc">Pollo salteado, champiñones, tocineta crocante y papas francesas.</p>
+                                    </div>
+                                    <span class="price">$26.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Wrap de Pavo o Pollo</span>
+                                        <p class="item-desc">Proteína a elección, pan servilleta, vegetales y papas francesas.</p>
+                                    </div>
+                                    <span class="price">$25.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Wrap de Jamones</span>
+                                        <p class="item-desc">Pan servilleta, jamón de pavo, cerdo y serrano con papas francesas.</p>
+                                    </div>
+                                    <span class="price">$28.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Burrito Moka</span>
+                                        <p class="item-desc">Tortilla con aderezos, vegetales salteados, res, cerdo, pollo y chorizo.</p>
+                                    </div>
+                                    <span class="price">$30.000</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Columna 2: Hamburguesas -->
+                        <div class="catalog-category">
+                            <h4>HAMBURGUESAS GOURMET</h4>
+                            <ul class="catalog-items">
+                                <li>
+                                    <div class="item-info">
+                                        <span>Moka Tradicional</span>
+                                        <p class="item-desc">Pan artesanal, carne de res, vegetales frescos, mozzarella y papas francesas.</p>
+                                    </div>
+                                    <span class="price">$24.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Fly Burger</span>
+                                        <p class="item-desc">Insignia: aros de cebolla crocantes y reducción de café con papas francesas.</p>
+                                    </div>
+                                    <span class="price">$26.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Pollo Crispy</span>
+                                        <p class="item-desc">Pechuga crujiente con tocineta y vegetales en pan de la casa.</p>
+                                    </div>
+                                    <span class="price">$28.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Hamburguesa Doble Carne</span>
+                                        <p class="item-desc">Pan artesanal, carne de res, vegetales, mozzarella y papas francesas.</p>
+                                    </div>
+                                    <span class="price">$28.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Hamburguesa Mixta</span>
+                                        <p class="item-desc">Pan artesanal, carne de res y pechuga de pollo con tocineta.</p>
+                                    </div>
+                                    <span class="price">$30.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Combo Burger Moka</span>
+                                        <p class="item-desc">Experiencia para compartir: 3 mini burgers gourmet y bebida personal.</p>
+                                    </div>
+                                    <span class="price">$36.000</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Columna 3: Pitas & Infantil -->
+                        <div class="catalog-category">
+                            <h4>PITAS ARTESANALES (INDIVIDUAL/MEDIANA)</h4>
+                            <ul class="catalog-items">
+                                <li>
+                                    <div class="item-info">
+                                        <span>Pita Pomodoro</span>
+                                        <p class="item-desc">Pan pita, salsa pomodoro, pesto, albahaca y mix de quesos.</p>
+                                    </div>
+                                    <span class="price">$16.000 / $22.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Pita Siciliana</span>
+                                        <p class="item-desc">Pan pita, pepperoni, salami y tomates aromatizados en pesto.</p>
+                                    </div>
+                                    <span class="price">$22.000 / $28.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Pita de Pollo</span>
+                                        <p class="item-desc">Pan pita, pollo y champiñones salteados con parmesano.</p>
+                                    </div>
+                                    <span class="price">$20.000 / $28.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Pita de Camarones</span>
+                                        <p class="item-desc">Pan pita, camarones al ajillo con albahaca y base pomodoro.</p>
+                                    </div>
+                                    <span class="price">$26.000 / $38.000</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. MENÚ INFANTIL -->
+                <div class="menu-catalog-container" id="catalog-infantil">
+                    <div class="menu-catalog-featured">
+                        <img src="assets/menus/infantil.jpg" alt="Menú Infantil" class="catalog-img">
+                        <div class="catalog-overlay">
+                            <h3>Menú Infantil</h3>
+                            <p>Especial para los más pequeños</p>
+                        </div>
+                    </div>
+                    <div class="menu-catalog-list catalog-double">
+                        <div class="catalog-category">
+                            <h4>COMBOS DIVERTIDOS</h4>
+                            <ul class="catalog-items">
+                                <li>
+                                    <div class="item-info">
+                                        <span>Combo Salchi-Moka</span>
+                                        <p class="item-desc">Crujientes papas fritas acompañadas de salchichas, jugo de cajita y un mini brownie.</p>
+                                    </div>
+                                    <span class="price">$18.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Combo Golden Nuggets</span>
+                                        <p class="item-desc">Nuggets de pollo doraditos y papas fritas, acompañados de jugo de cajita y un mini brownie.</p>
+                                    </div>
+                                    <span class="price">$20.000</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. BEBIDAS & REFRESCANTES -->
+                <div class="menu-catalog-container" id="catalog-refrescos">
+                    <div class="menu-catalog-featured">
+                        <img src="assets/menus/bebidas.avif" alt="Portada Bebidas" class="catalog-img">
+                        <div class="catalog-overlay">
+                            <h3>Bebidas & Refrescantes</h3>
+                            <p>Malteadas, Sodas de Autor & Jugos Naturales</p>
+                        </div>
+                    </div>
+                    <div class="menu-catalog-list catalog-triple">
+                        <div class="catalog-category">
+                            <h4>MALTEADAS</h4>
+                            <ul class="catalog-items">
+                                <li><span>Vainilla Clásica</span> <span class="price">$12.000</span></li>
+                                <li><span>Malteada de Café</span> <span class="price">$12.000</span></li>
+                                <li><span>Oreo Tentación</span> <span class="price">$13.000</span></li>
+                                <li><span>Frutos Rojos</span> <span class="price">$15.000</span></li>
+                            </ul>
+                        </div>
+                        <div class="catalog-category">
+                            <h4>BEBIDAS & LIMONADAS</h4>
+                            <ul class="catalog-items">
+                                <li><span>Limonada Natural</span> <span class="price">$8.000</span></li>
+                                <li><span>Hierbabuena</span> <span class="price">$10.000</span></li>
+                                <li><span>Limonada Cerezada</span> <span class="price">$12.000</span></li>
+                                <li><span>Sodas de Autor</span> <span class="price">$15.000</span></li>
+                            </ul>
+                        </div>
+                        <div class="catalog-category">
+                            <h4>ESENCIALES</h4>
+                            <ul class="catalog-items">
+                                <li><span>Agua sin gas</span> <span class="price">$6.000</span></li>
+                                <li><span>Coca-Cola / Soda</span> <span class="price">$7.000</span></li>
+                                <li><span>Infusiones Frutales</span> <span class="price">$7.000</span></li>
+                                <li><span>Milo Frío/Caliente</span> <span class="price">$10.000</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. MOKA BAR & DULCES -->
+                <div class="menu-catalog-container" id="catalog-bar">
+                    <div class="menu-catalog-featured">
+                        <img src="assets/menus/cocteles.jpg" alt="Portada Bar" class="catalog-img">
+                        <div class="catalog-overlay">
+                            <h3>Moka Bar & Dulces</h3>
+                            <p>Mixología, Cava de Vinos & Postres</p>
+                        </div>
+                    </div>
+                    <div class="menu-catalog-list catalog-triple">
+                        <div class="catalog-category">
+                            <h4>COCTELERÍA</h4>
+                            <ul class="catalog-items">
+                                <li>
+                                    <div class="item-info">
+                                        <span>Espresso Martini</span>
+                                        <p class="item-desc">El equilibrio perfecto: Shot de espresso, vodka y licor de café.</p>
+                                    </div>
+                                    <span class="price">$28.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Mojito de Café</span>
+                                        <p class="item-desc">Refrescante mezcla de ron, menta, limón y un toque de café.</p>
+                                    </div>
+                                    <span class="price">$24.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Margarita Tradicional</span>
+                                        <p class="item-desc">Tequila premium, triple seco y zumo de limón fresco.</p>
+                                    </div>
+                                    <span class="price">$20.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Gin Tonic Frutos Rojos</span>
+                                        <p class="item-desc">Ginebra, tónica premium e infusión de frutos del bosque.</p>
+                                    </div>
+                                    <span class="price">$28.000</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="catalog-category">
+                            <h4>CERVEZAS & VINOS</h4>
+                            <ul class="catalog-items">
+                                <li>
+                                    <div class="item-info">
+                                        <span>Cervezas Nacionales</span>
+                                        <p class="item-desc">Poker, Budweiser o Club Colombia bien heladas.</p>
+                                    </div>
+                                    <span class="price">$8k - $10k</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Copa de Vino/Sangría</span>
+                                        <p class="item-desc">Tinto, blanco o nuestra sangría especial de la casa.</p>
+                                    </div>
+                                    <span class="price">$15.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Botella Vino Tinto</span>
+                                        <p class="item-desc">Selección especial de la cava para compartir.</p>
+                                    </div>
+                                    <span class="price">$65.000</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="catalog-category">
+                            <h4>MOMENTOS DULCES</h4>
+                            <ul class="catalog-items">
+                                <li>
+                                    <div class="item-info">
+                                        <span>Affogato Clásico</span>
+                                        <p class="item-desc">Helado de vainilla "ahogado" en un shot de espresso caliente.</p>
+                                    </div>
+                                    <span class="price">$8.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Brownie con Helado</span>
+                                        <p class="item-desc">Brownie melcochudo de chocolate con helado y salsa de chocolate.</p>
+                                    </div>
+                                    <span class="price">$12.000</span>
+                                </li>
+                                <li>
+                                    <div class="item-info">
+                                        <span>Rellenas Moka</span>
+                                        <p class="item-desc">Nuestra especialidad dulce para cerrar con broche de oro.</p>
+                                    </div>
+                                    <span class="price">$22.000</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pie del Menú con Enlace Minimalista -->
+            <div class="menu-footer" data-animate="fadeUp">
+                <div class="menu-whatsapp-request">
+                    <a href="https://wa.me/573182073371?text=hola quiero hacer realizar un domicilio." class="whatsapp-link-text" target="_blank">
+                        <i class="fab fa-whatsapp"></i> pide tu domicilio aqui !!
+                    </a>
+                </div>
+                <p class="menu-disclaimer">* Precios sujetos a cambios sin previo aviso. Pregunta por nuestras opciones de temporada.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENTOS PRIVADOS & RESERVAS -->
+    <section id="events" class="section private-events">
+        <div class="container">
+            <div class="private-events-banner" data-animate="fadeUp">
+                <div class="private-events-content">
+                    <span class="section-tag">Celebraciones</span>
+                    <h2 class="private-title">Celebra tus mejores momentos<br><span class="text-gradient">con nosotros</span></h2>
+                    <p class="private-desc">
+                        ¿Estás planeando un evento privado? En <strong>Moka RestoBar</strong> transformamos tus fechas especiales en experiencias memorables. 
+                        Desde cumpleaños y cenas románticas hasta eventos corporativos y reuniones íntimas.
+                    </p>
+                    <ul class="private-features">
+                        <li><i class="fas fa-check-circle"></i> Caracter Personalizado</li>
+                        <li><i class="fas fa-check-circle"></i> Ambiente Exclusivo</li>
+                        <li><i class="fas fa-check-circle"></i> Atención de Primer Nivel</li>
+                    </ul>
+                    <div class="private-cta">
+                        <a href="https://wa.me/573182073371?text=Hola,%20me%20gustaría%20cotizar%20un%20evento%20privado%20en%20Moka." class="btn btn-whatsapp-large" target="_blank">
+                            <i class="fab fa-whatsapp"></i> cotizar aqui !!
+                        </a>
+                    </div>
+                </div>
+                <div class="private-events-image slider-container">
+                    <div class="private-events-slider">
+                        <!-- Slide 1: VIDEO (Impacto inmediato con Auto-Replay Infinito) -->
+                        <div class="private-slide active">
+                            <video src="assets/imagenes/animacion.mp4" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover;"></video>
+                        </div>
+                        <!-- Slide 2: Imagen -->
+                        <div class="private-slide">
+                            <img src="assets/imagenes/quienes somos.jpeg" alt="Eventos Moka 1">
+                        </div>
+                        <!-- Slide 3: Imagen -->
+                        <div class="private-slide">
+                            <img src="assets/imagenes/carrusel3.jpeg" alt="Eventos Moka 2">
+                        </div>
+                    </div>
+                    <!-- Flechas de navegación -->
+                    <button class="slider-arrow prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-arrow next"><i class="fas fa-chevron-right"></i></button>
+                    <!-- Indicadores (puntos) -->
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ... (El resto de las secciones: Experiencia Sensorial, Galería, etc. se mantienen igual) ... -->
+
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script>
+        // Lógica del Slider de Eventos
+        const slides = document.querySelectorAll('.private-slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.querySelector('.slider-arrow.prev');
+        const nextBtn = document.querySelector('.slider-arrow.next');
+        let currentSlide = 0;
+        let slideInterval;
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            currentSlide = (n + slides.length) % slides.length;
+            
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Auto-play
+        function startSlideShow() {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        function stopSlideShow() {
+            clearInterval(slideInterval);
+        }
+
+        // Listeners para el Slider de Eventos
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            stopSlideShow();
+            startSlideShow();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            stopSlideShow();
+            startSlideShow();
+        });
+
+        dots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                showSlide(idx);
+                stopSlideShow();
+                startSlideShow();
+            });
+        });
+
+        // Refuerzo para que los videos NUNCA se pausen
+        const allVideos = document.querySelectorAll('video');
+        allVideos.forEach(v => {
+            v.play().catch(() => {
+                // Si el navegador bloquea el play, lo intentamos de nuevo al primer clic
+                document.addEventListener('click', () => v.play(), { once: true });
+            });
+            
+            // Si por alguna razón se pausa, que vuelva a arrancar
+            v.onpause = () => v.play();
+        });
+
+        // Iniciar Slider
+        startSlideShow();
+    </script>
+</body>
+</html>
+
+    <!-- EXPERIENCIA SENSORIAL -->
+    <section id="sensorial" class="section sensorial">
+        <div class="sensorial-bg"></div>
+        <div class="container">
+            <div class="sensorial-content">
+                <div class="sensorial-text" data-animate="fadeUp">
+                    <span class="section-tag">Experiencia Sensorial</span>
+                    <h2 class="sensorial-title">No es solo café,<br><span class="text-gradient">es una
+                            experiencia</span></h2>
+                    <p class="sensorial-desc">Cada taza cuenta una historia. Desde el primer aroma hasta el último
+                        sorbo, te invitamos a vivir un viaje sensorial que conecta tu ser con el origen de cada grano.
+                    </p>
+                </div>
+                <div class="sensorial-cards">
+                    <div class="sensorial-card" data-animate="fadeUp" data-delay="100">
+                        <img src="assets/imagenes/olor2.avif" alt="Aroma" class="sensorial-card-bg">
+                        <div class="sensorial-card-overlay"></div>
+                        <div class="sensorial-card-content">
+                            <h3>Aroma</h3>
+                            <p>Notas florales, achocolatadas y frutales que despiertan tus sentidos antes del primer sorbo.</p>
+                        </div>
+                    </div>
+                    <div class="sensorial-card" data-animate="fadeUp" data-delay="250">
+                        <img src="assets/imagenes/sabor3.jpg" alt="Sabor" class="sensorial-card-bg">
+                        <div class="sensorial-card-overlay"></div>
+                        <div class="sensorial-card-content">
+                            <h3>Sabor</h3>
+                            <p>Perfiles complejos: chocolate, caramelo, frutas rojas y cítricos en cada preparación.</p>
+                        </div>
+                    </div>
+                    <div class="sensorial-card" data-animate="fadeUp" data-delay="400">
+                        <img src="assets/imagenes/origen1.jpg" alt="Origen" class="sensorial-card-bg">
+                        <div class="sensorial-card-overlay"></div>
+                        <div class="sensorial-card-content">
+                            <h3>Origen</h3>
+                            <p>Cada grano cuenta la historia de Montes de María, su tierra, su gente y su tradición.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sensorial-quote" data-animate="fadeUp" data-delay="500">
+                    <blockquote>"En Moka, cada taza es un viaje que conecta aroma, sabor y origen en una experiencia
+                        irrepetible."</blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="gallery" class="section gallery">
+        <div class="container">
+            <div class="section-header" data-animate="fadeUp">
+                <span class="section-tag">Galería</span>
+                <h2 class="section-title">Nuestro<br><span class="text-gradient">Espacio</span></h2>
+            </div>
+            <div class="carousel-container" data-animate="fadeUp">
+                <div class="carousel-track">
+                    <!-- Primera Serie -->
+                    <div class="gallery-item"><img src="assets/imagenes/carrusel1.jpeg" alt="Experiencia Moka 1" class="gallery-img"></div>
+                    <div class="gallery-item"><img src="assets/imagenes/carrusel2.jpeg" alt="Experiencia Moka 2" class="gallery-img"></div>
+                    <div class="gallery-item"><img src="assets/imagenes/carrusel3.jpeg" alt="Experiencia Moka 3" class="gallery-img"></div>
+                    <div class="gallery-item"><img src="assets/imagenes/carrusel4.jpeg" alt="Experiencia Moka 4" class="gallery-img"></div>
+                    <div class="gallery-item"><img src="assets/imagenes/carrusel5.jpeg" alt="Experiencia Moka 5" class="gallery-img"></div>
+                    
+                    <!-- Segunda Serie (Duplicada para scroll infinito) -->
+                    <div class="gallery-item"><img src="assets/imagenes/carrusel1.jpeg" alt="Experiencia Moka 1" class="gallery-img"></div>
+                    <div class="gallery-item"><img src="assets/imagenes/carrusel2.jpeg" alt="Experiencia Moka 2" class="gallery-img"></div>
+                    <div class="gallery-item"><img src="assets/imagenes/carrusel3.jpeg" alt="Experiencia Moka 3" class="gallery-img"></div>
+                    <div class="gallery-item"><img src="assets/imagenes/carrusel4.jpeg" alt="Experiencia Moka 4" class="gallery-img"></div>
+                    <div class="gallery-item"><img src="assets/imagenes/carrusel5.jpeg" alt="Experiencia Moka 5" class="gallery-img"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UBICACIÓN -->
+    <section id="location" class="section location">
+        <div class="container">
+            <div class="location-grid">
+                <div class="location-info" data-animate="fadeRight">
+                    <span class="section-tag">Encuéntranos</span>
+                    <h2 class="section-title">Nuestra<br><span class="text-gradient">Ubicación</span></h2>
+                    <div class="location-details">
+                        <div class="location-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Dirección</h4>
+                                <p><a href="https://www.google.com/maps/place/Moka+Coffee+Bar/@9.7161215,-75.1270079,780m/data=!3m2!1e3!4b1!4m6!3m5!1s0x8e58d1077f451c75:0x67476d7a40aee9ea!8m2!3d9.7161162!4d-75.122137!16s%2Fg%2F11p76752qv?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D"
+                                        target="_blank" rel="noopener noreferrer" style="transition: color 0.3s;"
+                                        onmouseover="this.style.color='#c8a46e'"
+                                        onmouseout="this.style.color='inherit'">Cl. 24 #49-2, El Carmen de Bolívar</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="location-detail">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Horarios</h4>
+                                <p>Lun - Sáb: 7:00 AM - 10:00 PM</p>
+                                <p>Domingo: 8:00 AM - 8:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="location-detail">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Contacto</h4>
+                                <p><a href="tel:+573182073371" style="transition: color 0.3s;"
+                                        onmouseover="this.style.color='#c8a46e'"
+                                        onmouseout="this.style.color='inherit'">+57 3182073371</a></p>
+                            </div>
+                        </div>
+                        <div class="location-social-cta" style="margin-top: 32px; padding: 32px 24px; background: linear-gradient(135deg, rgba(200,164,110,0.1) 0%, rgba(20,20,20,0.8) 100%); border: 1px solid rgba(200,164,110,0.25); border-radius: var(--radius-lg); text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.3s; cursor: default;" onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='rgba(200,164,110,0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(200,164,110,0.25)';">
+                            <h4 style="font-family: var(--font-display); color: var(--gold-light); font-size: 1.5rem; margin-bottom: 12px; text-shadow: 0 2px 5px rgba(0,0,0,0.5);">¡Únete a nuestra comunidad!</h4>
+                            <p style="color: var(--text-primary); font-size: 0.95rem; margin-bottom: 24px; line-height: 1.6;">Síguenos para descubrir nuestras nuevas creaciones, revivir las mejores noches y enterarte antes que nadie de nuestros eventos exclusivos.</p>
+                            <div class="footer-socials" style="justify-content: center; gap: 24px;">
+                                <a href="https://www.instagram.com/moka_restobar/" target="_blank"
+                                    rel="noopener noreferrer" class="social-link" aria-label="Instagram" style="width: 50px; height: 50px; font-size: 1.3rem;"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=100054210413918" target="_blank"
+                                    rel="noopener noreferrer" class="social-link" aria-label="Facebook" style="width: 50px; height: 50px; font-size: 1.3rem;"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.tiktok.com/@moka_coffeebar?_r=1&_t=ZS-95otwMDNa8l" target="_blank"
+                                    rel="noopener noreferrer" class="social-link" aria-label="TikTok" style="width: 50px; height: 50px; font-size: 1.3rem;"><i
+                                        class="fab fa-tiktok"></i></a>
+                                <a href="https://wa.me/573182073371?text=Hola buenas, me regala la carta porfavor"
+                                    target="_blank" rel="noopener noreferrer" class="social-link"
+                                    aria-label="WhatsApp" style="width: 50px; height: 50px; font-size: 1.3rem;"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-map" data-animate="fadeLeft">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Moka%20Coffee%20Bar%2C%20El%20Carmen%20de%20Bol%C3%ADvar&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="footer">
+        <div class="container">
+
+            <div class="footer-payments" style="text-align: center; padding: 40px 0 20px; border-top: 1px solid rgba(200,164,110,0.1);">
+                <h4 style="font-family: var(--font-heading); color: var(--gold); font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px;">Medios de Pago Aceptados</h4>
+                <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; color: var(--text-secondary); font-size: 1.5rem;">
+                    <!-- Efectivo -->
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                        <img src="assets/medios%20de%20pago/efectivo.png" alt="Efectivo" style="width: 60px; height: 60px; object-fit: contain; border-radius: 12px; background-color: #ffffff; padding: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">
+                        <span style="font-size: 0.75rem; font-family: var(--font-heading); letter-spacing: 1px;">Efectivo</span>
+                    </div>
+                    <!-- Nequi -->
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="openQRModal('Nequi', 'assets/medios%20de%20pago/qr_nequi.png', 'Número: 318 207 3371')">
+                        <img src="assets/medios%20de%20pago/nequi.png" alt="Nequi" style="width: 60px; height: 60px; object-fit: contain; border-radius: 12px; background-color: #ffffff; padding: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">
+                        <span style="font-size: 0.75rem; font-family: var(--font-heading); letter-spacing: 1px;">Nequi</span>
+                    </div>
+                    <!-- DaviPlata -->
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="openQRModal('DaviPlata', 'assets/medios%20de%20pago/qr_daviplata.png', 'Número: 318 207 3371')">
+                        <img src="assets/medios%20de%20pago/daviplata.jpg" alt="DaviPlata" style="width: 60px; height: 60px; object-fit: contain; border-radius: 12px; background-color: #ffffff; padding: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">
+                        <span style="font-size: 0.75rem; font-family: var(--font-heading); letter-spacing: 1px;">DaviPlata</span>
+                    </div>
+                    <!-- Bancolombia -->
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" onclick="openQRModal('Bancolombia', 'assets/medios%20de%20pago/qr_bancolombia.png', 'Ahorros Bancolombia')">
+                        <img src="assets/medios%20de%20pago/bancolombia.jpg" alt="Bancolombia" style="width: 60px; height: 60px; object-fit: contain; border-radius: 12px; background-color: #ffffff; padding: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">
+                        <span style="font-size: 0.75rem; font-family: var(--font-heading); letter-spacing: 1px;">Bancolombia</span>
+                    </div>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--gold); margin-top: 15px; letter-spacing: 1px;">Haz clic en los medios digitales para ver el QR</p>
+            </div>
+
+            <script>
+                // Función para los códigos QR de los medios de pago
+                function openQRModal(title, imageSrc, info) {
+                    Swal.fire({
+                        title: `<span style="color: #c8a46e; font-family: 'Outfit', sans-serif; text-transform: uppercase; letter-spacing: 2px;">Pagar con ${title}</span>`,
+                        html: `
+                            <div style="background: #fff; padding: 15px; border-radius: 12px; display: inline-block; margin: 15px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                                <img src="${imageSrc}" alt="Código QR" style="width: 220px; height: 220px; object-fit: contain; display: block;">
+                            </div>
+                            <p style="color: #ffffff; font-size: 1.1rem; font-weight: 600; margin-top: 10px; font-family: 'Inter', sans-serif;">${info}</p>
+                        `,
+                        background: 'linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%)',
+                        showConfirmButton: true,
+                        confirmButtonText: 'CERRAR',
+                        confirmButtonColor: '#c8a46e',
+                        padding: '2em',
+                        color: '#ffffff',
+                        customClass: {
+                            popup: 'premium-modal-border',
+                            confirmButton: 'premium-swal-button'
+                        }
+                    });
+                }
+
+                // Lógica del Panel Administrativo Oculto (5 clics en 2026)
+                document.addEventListener('DOMContentLoaded', function() {
+                    let adminClicks = 0;
+                    let lastAdminClick = 0;
+                    const trigger = document.getElementById('adminTrigger');
+
+                    // --- CONFIGURACIÓN DE API (LOCAL VS PRODUCCIÓN) ---
+                    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+                    // Si es local usa puerto 3000, si es Hostinger usa el dominio actual
+                    const apiBaseUrl = isLocal ? 'http://localhost:3000' : window.location.origin;
+
+                    if (trigger) {
+                        trigger.addEventListener('click', function(e) {
+                            const timeNow = new Date().getTime();
+                            if (timeNow - lastAdminClick < 1000) {
+                                adminClicks++;
+                            } else {
+                                adminClicks = 1;
+                            }
+                            lastAdminClick = timeNow;
+
+                            if (adminClicks === 5) {
+                                adminClicks = 0;
+                                showAdminLogin();
+                            }
+                        });
+                    }
+
+                    function showAdminLogin() {
+                        Swal.fire({
+                            title: '<span style="color: #c8a46e; font-family: \'Outfit\', sans-serif; letter-spacing: 2px;">ACCESO PRIVADO</span>',
+                            text: 'Introduce la clave de administración para gestionar anuncios.',
+                            input: 'password',
+                            background: 'linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%)',
+                            color: '#fff',
+                            confirmButtonColor: '#c8a46e',
+                            confirmButtonText: 'INGRESAR',
+                            showCancelButton: true,
+                            cancelButtonText: 'CANCELAR',
+                            customClass: {
+                                popup: 'premium-modal-border',
+                                confirmButton: 'premium-swal-button'
+                            }
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                if (result.value === 'moka2026') {
+                                    Swal.fire({
+                                        icon: 'success',
+                                        title: 'Bienvenido',
+                                        text: 'Acceso concedido. Redirigiendo al panel...',
+                                        timer: 1500,
+                                        showConfirmButton: false,
+                                        background: '#1a1a1a',
+                                        color: '#fff'
+                                    }).then(() => {
+                                        // Redirige al panel administrativo (Local o Producción)
+                                        window.location.href = `${apiBaseUrl}/admin-moka`; 
+                                    });
+                                    // Redirigir al panel administrativo real
+                                    // window.location.href = '/admin'; 
+                                } else {
+                                    Swal.fire({
+                                        icon: 'error',
+                                        title: 'Denegado',
+                                        text: 'Clave incorrecta.',
+                                        background: '#1a1a1a',
+                                        color: '#fff'
+                                    });
+                                }
+                            }
+                        });
+                    }
+
+                    // --- CARGA DINÁMICA DE ANUNCIOS SINCRONIZADA CON PRISMA ---
+                    async function fetchAnnouncements() {
+                        const container = document.getElementById('announcementsContainer');
+                        if (!container) return;
+
+                        try {
+                            // Conexión dinámica (Localhost o Hostinger)
+                            const response = await fetch(`${apiBaseUrl}/api/promotions`); 
+                            if (!response.ok) throw new Error('Offline');
+                            
+                            const data = await response.json();
+                            if (data && data.length > 0) {
+                                document.getElementById('announcements').style.display = 'block';
+                                container.innerHTML = '';
+                                data.forEach((item, index) => {
+                                    const delay = index * 200;
+                                    
+                                    // Procesar Fecha (Sacar Día y Mes de start_date)
+                                    const dateObj = new Date(item.start_date);
+                                    const day = dateObj.getDate().toString().padStart(2, '0');
+                                    const months = ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"];
+                                    const month = months[dateObj.getMonth()];
+
+                                    // Determinar si es Oferta o Evento
+                                    const isPromo = item.discount && item.discount !== "0";
+                                    const typeLabel = isPromo ? 'OFERTA' : 'EVENTO';
+                                    const badgeClass = isPromo ? 'badge-promo' : 'badge-event';
+                                    const icon = isPromo ? 'fas fa-tag' : 'fas fa-calendar-alt';
+                                    const btnText = isPromo ? 'APROVECHAR OFERTA' : 'RESERVAR LUGAR';
+
+                                    const card = `
+                                        <div class="announcement-card" data-animate="fadeUp" data-delay="${delay}">
+                                            <div class="announcement-image">
+                                                <img src="${item.image_url || 'assets/imagenes/espresso_shot_1777083396787.png'}" alt="${item.title}">
+                                                <div class="announcement-overlay"></div>
+                                            </div>
+                                            <div class="announcement-badge ${badgeClass}">
+                                                <i class="${icon}"></i> ${typeLabel}
+                                            </div>
+                                            <div class="announcement-body">
+                                                <div class="announcement-date-box">
+                                                    <span class="day">${day}</span>
+                                                    <span class="month">${month}</span>
+                                                </div>
+                                                <div class="announcement-info">
+                                                    <h3>${item.title}</h3>
+                                                    <p>${item.description}</p>
+                                                    <a href="#" class="btn-pro-link">
+                                                        ${btnText} <i class="fas fa-arrow-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    `;
+                                    container.innerHTML += card;
+                                });
+                                if (window.observeElements) window.observeElements();
+                            }
+                        } catch (error) {
+                            console.log("Esperando conexión con la base de datos...");
+                        }
+                    }
+
+                    // --- NAVEGACIÓN DE CATEGORÍAS CON SCROLL Y ENCUADRE PERFECTO ---
+                    const tabs = document.querySelectorAll('.menu-cat-tab');
+                    const catalogs = document.querySelectorAll('.menu-catalog-container');
+
+                    tabs.forEach(tab => {
+                        tab.addEventListener('click', () => {
+                            const target = tab.getAttribute('data-catalog');
+
+                            // 1. Cambiar estado de botones
+                            tabs.forEach(t => t.classList.remove('active'));
+                            tab.classList.add('active');
+
+                            // 2. Ocultar todos los catálogos
+                            catalogs.forEach(catalog => {
+                                catalog.classList.remove('active');
+                            });
+
+                            // 3. Mostrar el seleccionado
+                            const activeCatalog = document.getElementById(`catalog-${target}`);
+                            if (activeCatalog) {
+                                activeCatalog.classList.add('active');
+                                
+                                // 4. SCROLL CON OFFSET (Para ver portada e info)
+                                setTimeout(() => {
+                                    const offset = 120; // Espacio para que no quede pegado arriba
+                                    const bodyRect = document.body.getBoundingClientRect().top;
+                                    const elementRect = activeCatalog.getBoundingClientRect().top;
+                                    const elementPosition = elementRect - bodyRect;
+                                    const offsetPosition = elementPosition - offset;
+
+                                    window.scrollTo({
+                                        top: offsetPosition,
+                                        behavior: 'smooth'
+                                    });
+                                }, 50);
+                            }
+                        });
+                    });
+
+                    fetchAnnouncements();
+                });
+            </script>
+
+            <style>
+                .premium-modal-border {
+                    border: 1px solid rgba(200, 164, 110, 0.4) !important;
+                    border-radius: 20px !important;
+                }
+                .premium-swal-button {
+                    font-family: 'Outfit', sans-serif !important;
+                    font-weight: 700 !important;
+                    letter-spacing: 2px !important;
+                    padding: 12px 35px !important;
+                    border-radius: 50px !important;
+                    text-transform: uppercase !important;
+                }
+            </style>
+
+            <div class="footer-bottom" style="border-top: none;">
+                <p>&copy; <span id="adminTrigger" style="cursor: default; user-select: none; padding: 10px; margin: -10px; display: inline-block;">2026</span> Moka RestoBar. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <!-- Botón de WhatsApp Flotante -->
+    <a href="https://wa.me/573182073371?text=Hola,%20quisiera%20hacer%20una%20reservación." class="whatsapp-float" target="_blank" aria-label="Hablar con el jefe">
+        <i class="fab fa-whatsapp"></i>
+        <span class="float-tooltip">Reservar Mesa</span>
+    </a>
+</body>
+
+</html>
