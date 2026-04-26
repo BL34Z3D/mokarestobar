@@ -94,5 +94,22 @@
     .hero-title { font-size: 2rem; }
     .hero-cta { flex-direction: column; align-items: center; }
     .hero-stats { gap: 20px; }
-    .menu-tabs { flex-direction: column; align-items: center; }
+    .menu-tabs {
+        flex-direction: row;
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding: 10px 20px;
+        gap: 12px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+    }
+    .menu-tabs::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+    .menu-cat-tab {
+        flex: 0 0 auto;
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
 }

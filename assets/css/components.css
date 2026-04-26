@@ -134,14 +134,16 @@
 /* EL GRANO DE CAFÉ REAL */
 .bean-o {
     display: inline-block;
-    width: 28px; /* Aumentado de 22px */
-    height: 42px; /* Aumentado de 32px */
-    background: var(--gold);
+    width: 28px;
+    height: 42px;
+    background: linear-gradient(145deg, #7c4817, #613215);
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
     position: relative;
     margin: 0 4px;
     transform: rotate(5deg);
     overflow: hidden;
+    box-shadow: inset -2px -2px 4px rgba(0,0,0,0.3), 
+                inset 2px 2px 4px rgba(255,255,255,0.1);
 }
 
 .bean-o::after {
