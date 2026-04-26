@@ -150,26 +150,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ===== HERO VIDEO CONTROLLER =====
-    const heroSection = document.getElementById('hero');
     const heroVideo = document.getElementById('heroMainVideo');
-    if (heroSection && heroVideo) {
-        let isFirstLoad = true;
-        
-        const videoObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    if (!isFirstLoad) {
-                        heroVideo.currentTime = 0;
-                    }
-                    heroVideo.play().catch(e => console.log('Autoplay prevenido:', e));
-                    isFirstLoad = false;
-                } else {
-                    heroVideo.pause();
-                }
+    if (heroVideo) {
+        // Forzar reproducción inmediata
+        const playVideo = () => {
+            heroVideo.play().catch(error => {
+                console.log("Autoplay esperando interacción o carga:", error);
             });
-        }, { threshold: 0.1 });
+        };
 
-        videoObserver.observe(heroSection);
+        playVideo();
+        
+        // También intentar cuando todo cargue
+        window.addEventListener('load', playVideo);
+        
+        // Y cuando se haga el primer scroll o click (para saltar bloqueos de navegador)
+        const unlockVideo = () => {
+            playVideo();
+            window.removeEventListener('click', unlockVideo);
+            window.removeEventListener('touchstart', unlockVideo);
+        };
+        window.addEventListener('click', unlockVideo);
+        // Forzar reinicio si el "loop" nativo falla (común en móviles)
+        heroVideo.addEventListener('ended', () => {
+            heroVideo.play();
+        });
     }
 
     // ===== PARALLAX ABOUT IMAGE =====

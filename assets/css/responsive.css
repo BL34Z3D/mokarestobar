@@ -13,21 +13,34 @@
         position: fixed;
         top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(10,10,10,0.98);
-        backdrop-filter: blur(20px);
+        width: 100%;
+        height: 100vh;
+        background: #0a0a0a; /* Fondo sólido para evitar traslapes */
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 16px;
+        gap: 25px;
         opacity: 0;
         visibility: hidden;
-        transition: var(--transition);
+        transition: all 0.4s ease;
+        z-index: 1000;
     }
-    .nav-links.active { opacity: 1; visibility: visible; }
-    .nav-link { font-size: 1.1rem; padding: 12px 24px; width: 100%; justify-content: center; }
-    .nav-toggle { display: flex; }
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-link { 
+        font-size: 1.4rem; 
+        padding: 15px; 
+        width: 80%; 
+        justify-content: center; 
+        border-bottom: 1px solid rgba(200, 164, 110, 0.1);
+    }
+    .nav-toggle { 
+        display: flex; 
+        z-index: 1001; /* Siempre por encima del menú */
+    }
 
     /* Mega Menú en Móvil */
     .mega-menu {

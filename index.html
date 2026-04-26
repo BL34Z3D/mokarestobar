@@ -64,8 +64,7 @@
     <!-- HERO -->
     <section id="hero" class="hero">
         <div class="hero-bg">
-            <video autoplay muted playsinline id="heroMainVideo" class="hero-video">
-                <source src="assets/imagenes/animacion4.mp4" type="video/mp4">
+            <video autoplay muted loop playsinline preload="auto" id="heroMainVideo" class="hero-video" src="assets/imagenes/animacion4.mp4">
             </video>
             <div class="hero-overlay"></div>
             <div class="hero-particles" id="heroParticles"></div>
@@ -115,7 +114,7 @@
             <div class="about-grid">
                 <div class="about-image" data-animate="fadeRight">
                     <div class="about-img-wrapper">
-                        <img src="assets/imagenes/quienes somos.jpeg" alt="Quiénes Somos Moka" class="about-img-real">
+                        <img src="assets/imagenes/quienes somos.jpeg" alt="Quiénes Somos Moka" class="about-img-real" loading="lazy">
                         <div class="about-img-decoration"></div>
                     </div>
                 </div>
@@ -253,7 +252,7 @@
                 <!-- 1. RITUAL DEL CAFÉ (Activo por defecto) -->
                 <div class="menu-catalog-container active" id="catalog-cafe">
                     <div class="menu-catalog-featured">
-                        <img src="assets/menus/ritualcafe.avif" alt="Ritual del Café" class="catalog-img">
+                        <img src="assets/menus/ritualcafe.avif" alt="Ritual del Café" class="catalog-img" loading="lazy">
                         <div class="catalog-overlay">
                             <h3>El Ritual del Café</h3>
                             <p>Clásicos de Barista & Métodos de Inmersión</p>
@@ -344,7 +343,7 @@
                 <!-- 2. MAÑANA SENSORIAL -->
                 <div class="menu-catalog-container" id="catalog-manana">
                     <div class="menu-catalog-featured">
-                        <img src="assets/menus/desayuno.webp" alt="Portada Desayunos" class="catalog-img">
+                        <img src="assets/menus/desayuno.webp" alt="Portada Desayunos" class="catalog-img" loading="lazy">
                         <div class="catalog-overlay">
                             <h3>Mañana Sensorial</h3>
                             <p>Desayunos & Entradas</p>
@@ -446,7 +445,7 @@
                 <!-- 3. GASTRONOMÍA DE AUTOR -->
                 <div class="menu-catalog-container" id="catalog-gastronomia">
                     <div class="menu-catalog-featured">
-                        <img src="assets/menus/almuerzo.webp" alt="Portada Gastronomía" class="catalog-img">
+                        <img src="assets/menus/almuerzo.webp" alt="Portada Gastronomía" class="catalog-img" loading="lazy">
                         <div class="catalog-overlay">
                             <h3>Gastronomía de Autor</h3>
                             <p>Platos Fuertes & Alta Cocina</p>
@@ -1408,6 +1407,11 @@
         </div>
 
         <script>
+            // Definición de base para la API
+            const apiBaseUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+                ? 'http://localhost:3000' 
+                : 'https://moka-api.hostinger.com'; // Ajusta esto a tu URL real de producción
+
             // Función para los códigos QR de los medios de pago
             function openQRModal(title, imageSrc, info) {
                 Swal.fire({
@@ -1561,7 +1565,16 @@
     </div>
 </footer>
 
-<script src="assets/js/main.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script>
+            // Forzar activación de animaciones si por alguna razón el observador falla al inicio
+            document.addEventListener('DOMContentLoaded', () => {
+                setTimeout(() => {
+                    window.scrollTo(window.scrollX, window.scrollY + 1);
+                    window.scrollTo(window.scrollX, window.scrollY - 1);
+                }, 1000);
+            });
+        </script>
 <!-- Botón de WhatsApp Flotante -->
 <a href="https://wa.me/573182073371?text=Hola,%20quisiera%20hacer%20una%20reservación." class="whatsapp-float"
     target="_blank" aria-label="Hablar con el jefe">
